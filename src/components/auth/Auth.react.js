@@ -21,6 +21,6 @@ Auth.propTypes = {
 
 export default connect((state) => {
   return {
-    userName: state.user.name,
+    userName: state.getIn(['user', 'displayName']),
   }
 })(Auth);
